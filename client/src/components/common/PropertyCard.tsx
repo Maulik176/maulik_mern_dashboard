@@ -27,7 +27,7 @@ const PropertyCard = ({
                     boxShadow: "0 22px 45px 2px rgba(176, 176, 176, 0.1)",
                 },
                 cursor: "pointer",
-                backgroundColor: "#fcfcfc"
+                backgroundColor: "#fcfcfc !important"
             }}
             elevation={0}
         >
