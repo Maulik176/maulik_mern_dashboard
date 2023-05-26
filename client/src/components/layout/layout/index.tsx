@@ -14,7 +14,7 @@ export const Layout: React.FC<LayoutProps> = ({
 }) => {
     const SiderToRender = Sider ?? DefaultSider;
     const HeaderToRender = Header ?? DefaultHeader;
-
+    const isDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
     return (
         <Box display="flex" flexDirection="row">
             <SiderToRender />
@@ -24,16 +24,19 @@ export const Layout: React.FC<LayoutProps> = ({
                     flexDirection: "column",
                     flex: 1,
                     minHeight: "100vh",
+                    bgcolor: isDarkMode ? "#000000" : "inherit", // Set background color based on dark mode
                 }}
             >
                 <HeaderToRender />
+                
                 <Box
                     component="main"
                     sx={{
                         p: { xs: 1, md: 2, lg: 3 },
                         flexGrow: 1,
-                        bgcolor: 'white',
+                        bgcolor: (theme) => theme.palette.background.default,
                     }}
+                    
                 >
                     {children}
                 </Box>

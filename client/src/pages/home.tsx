@@ -73,6 +73,7 @@ const Home = () => {
                 borderRadius="15px"
                 padding="20px"
                 bgcolor="#fcfcfc"
+                // bgcolor="#626262"
                 display="flex"
                 flexDirection="column"
                 minWidth="100%"
@@ -94,6 +95,7 @@ const Home = () => {
                             location={property.location}
                             price={property.price}
                             photo={property.photo}
+                            
                         />
                     ))}
                 </Box>
