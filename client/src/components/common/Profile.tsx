@@ -168,7 +168,7 @@ const Profile = ({ type, name, avatar, email, properties }: ProfileProps) => (
             </Box>
         </Box>
 
-        {properties.length > 0 && (
+        {properties !== undefined && properties.length > 0 && (
             <Box mt={2.5} borderRadius="15px" padding="20px" bgcolor="#FCFCFC">
                 <Typography fontSize={18} fontWeight={600} color="#11142D">
                     {type} Properties
@@ -182,7 +182,7 @@ const Profile = ({ type, name, avatar, email, properties }: ProfileProps) => (
                         gap: 2.5,
                     }}
                 >
-                    {properties?.map((property: PropertyProps) => (
+                    {properties?.map((property: Record<string, any>) => (
                         <PropertyCard
                             key={property._id}
                             id={property._id}

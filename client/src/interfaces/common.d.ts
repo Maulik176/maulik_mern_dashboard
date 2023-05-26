@@ -14,7 +14,8 @@ export interface ProfileProps {
     name: string;
     avatar: string;
     email: string;
-    properties: Array | undefined;
+    properties: Array<Record<string, any>> | undefined;
+    allProperties: Array<Record<string, any>> | undefined;
 }
 
 export interface PropertyProps {
