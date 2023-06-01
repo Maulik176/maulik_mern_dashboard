@@ -24,7 +24,7 @@ export const Layout: React.FC<LayoutProps> = ({
                     flexDirection: "column",
                     flex: 1,
                     minHeight: "100vh",
-                    bgcolor: isDarkMode ? "#000000" : "inherit", // Set background color based on dark mode
+                    bgcolor: isDarkMode ? "#00000" : "#fcfcfc", // Set background color based on dark mode
                 }}
             >
                 <HeaderToRender />
@@ -34,7 +34,8 @@ export const Layout: React.FC<LayoutProps> = ({
                     sx={{
                         p: { xs: 1, md: 2, lg: 3 },
                         flexGrow: 1,
-                        bgcolor: (theme) => theme.palette.background.default,
+                        // bgcolor: "#626262"
+                        bgcolot: (theme) => theme.palette.background.default,
                     }}
                     
                 >

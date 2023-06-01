@@ -26,7 +26,7 @@ const Profile = ({ type, name, avatar, email, properties }: ProfileProps) => (
                     display: "flex",
                     flexDirection: { xs: "column", md: "row" },
                     gap: 2.5,
-                    // backgroundColor: "#626262"
+                    // bgColor: "#626262"
                 }}
             >
                 <img
